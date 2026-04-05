@@ -66,6 +66,32 @@ body {
   transform: translateY(0);
 }
 
+/* Mobile Responsive Adjustments */
+@media (max-width: 991.98px) {
+  .identity-panel {
+    position: relative;
+    top: 0;
+    height: auto;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
+
+  .content-panel {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+
+  .project-header {
+    flex-direction: column;
+    gap: 0.25rem;
+    align-items: flex-start;
+  }
+
+  .sys-footer {
+    margin-top: 3rem;
+  }
+}
+
 /* Micro-Typography */
 .section-label {
   font-size: 0.7rem;
@@ -254,4 +280,74 @@ body {
   margin-top: 6rem;
   font-size: 0.75rem;
   color: var(--text-faint);
+}
+
+/* ==========================================================================
+   MOBILE & RESPONSIVE ADJUSTMENTS
+   ========================================================================== */
+
+@media (max-width: 991.98px) {
+  /* Release the sticky identity panel on tablet and below */
+  .identity-panel {
+    position: relative;
+    top: auto;
+    height: auto;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+
+  .content-panel {
+    padding-top: 1.5rem;
+    padding-bottom: 4rem;
+  }
+
+  /* Reduce spacing on mobile for tighter layout */
+  .layout-wrapper {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  /* Projects stack vertically instead of baseline alignment */
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  /* Adjust project list wrapper to not need left padding for the indicator, 
+     as we don't draw the indicator on mobile touch devices */
+  .project-list-wrapper {
+    padding-left: 0;
+  }
+
+  .project-title {
+    font-size: 1.1rem;
+  }
+
+  .project-desc {
+    max-width: 100%;
+  }
+
+  /* Hide the active indicator on mobile since we convert to click-to-expand */
+  .active-indicator {
+    display: none;
+  }
+
+  /* Environment stack wraps properly */
+  .tech-inline {
+    line-height: 1.8;
+  }
+
+  .tech-inline li {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Footer stacks instead of flex space-between */
+  .sys-footer {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 0.5rem;
+  }
 }
