@@ -1,0 +1,257 @@
+:root {
+  --bg-base: #fcfcfc;
+  --text-main: #111111;
+  --text-muted: #666666;
+  --text-faint: #a0a0a0;
+  --accent: #2563eb; /* A refined, calm blue */
+  --border-subtle: rgba(0, 0, 0, 0.06);
+
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --ease-reveal: cubic-bezier(0.25, 1, 0.4, 1);
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: rgba(37, 99, 235, 0.15);
+  color: var(--text-main);
+}
+
+/* Typography Utility */
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Layout */
+.layout-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.identity-panel {
+  position: sticky;
+  top: 5rem;
+  height: calc(100vh - 10rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.content-panel {
+  padding-top: 5rem;
+  padding-bottom: 8rem;
+}
+
+/* Base fade-in (JS will remove .pre-load) */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 0.8s var(--ease-reveal),
+    transform 0.8s var(--ease-reveal);
+  will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Micro-Typography */
+.section-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-faint);
+  margin-bottom: 2rem;
+}
+
+.contact-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.contact-link:hover {
+  color: var(--text-main);
+}
+
+.contact-link::before {
+  content: "→";
+  margin-right: 0.5rem;
+  font-family: var(--font-mono);
+  opacity: 0.3;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.contact-link:hover::before {
+  transform: translateX(3px);
+  opacity: 1;
+  color: var(--accent);
+}
+
+/* 
+ * PROJECT LIST & HOVER SYSTEM
+ */
+.project-list-wrapper {
+  position: relative;
+  padding-left: 24px;
+}
+
+/* The moving indicator */
+.active-indicator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 0;
+  background-color: var(--text-main);
+  opacity: 0;
+  transition:
+    transform 0.3s var(--ease-reveal),
+    height 0.3s var(--ease-reveal),
+    opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.has-focus .active-indicator {
+  opacity: 1;
+}
+
+.project-item {
+  position: relative;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.project-item:first-child {
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* Dim non-hovered items when the list has focus */
+.has-focus .project-item:not(.is-active) {
+  opacity: 0.4;
+}
+
+/* Project Header & Title */
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.project-title {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--text-main);
+  margin: 0;
+  display: inline-block;
+  position: relative;
+  /* Tracking interaction */
+  letter-spacing: 0;
+  transition:
+    letter-spacing 0.3s var(--ease-reveal),
+    color 0.3s ease;
+}
+
+/* Subtle underline grow */
+.project-title::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--text-main);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s var(--ease-reveal);
+}
+
+.project-tech {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Project Description (Hidden by default) */
+.project-reveal-box {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.25s var(--ease-reveal);
+}
+
+.project-desc {
+  overflow: hidden;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-weight: 300;
+  opacity: 0;
+  transform: translateY(4px);
+  transition:
+    opacity 0.25s var(--ease-reveal),
+    transform 0.25s var(--ease-reveal);
+  max-width: 90%;
+}
+
+.project-desc-inner {
+  padding-top: 0.75rem; /* Only visible when grid expands */
+  padding-bottom: 0.5rem;
+}
+
+/* IS-ACTIVE STATE (Triggered via JS) */
+.project-item.is-active .project-title {
+  letter-spacing: 0.015em;
+  color: var(--text-main);
+}
+
+.project-item.is-active .project-title::after {
+  transform: scaleX(1);
+}
+
+.project-item.is-active .project-reveal-box {
+  grid-template-rows: 1fr;
+}
+
+.project-item.is-active .project-desc {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Environment Stack List */
+.tech-inline {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 300;
+}
+.tech-inline span {
+  color: var(--text-main);
+  font-weight: 400;
+}
+
+/* Footer note */
+.sys-footer {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 2rem;
+  margin-top: 6rem;
+  font-size: 0.75rem;
+  color: var(--text-faint);
+}
