@@ -162,4 +162,4 @@ mindmap
 - � **LinkedIn:** [aimankarami](https://www.linkedin.com/in/aimankarami)
 - ✉️ **Email:** aimankarami27@gmail.com
 
-<p align="center"><sub>“True knowledge is quiet. Its work speaks for it.”</sub></p>
+<p align="center"><sub>“An idiot admires complexity, a genius admires simplicity.” — Terry A. Davis</sub></p>
