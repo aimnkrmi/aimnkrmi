@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#050505">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Muhamad Noraiman Karami — Applied Mathematics (Hons) graduate and backend developer. Research in PINNs, backend systems, and infrastructure. Explore selected work, journey, and credentials.">
+  <meta name="author" content="Muhamad Noraiman Karami">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Muhamad Noraiman Karami — Applied Mathematics & Backend Systems">
+  <meta property="og:description" content="Applied Mathematics (Hons) graduate and backend developer. Research in Physics-Informed Neural Networks, backend systems, and infrastructure.">
+  <meta property="og:image" content="assets/images/og-cover-placeholder.jpg">
+  <meta property="og:url" content="https://karami.my">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Muhamad Noraiman Karami — Applied Mathematics & Backend Systems</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23050505'/%3E%3Cpath d='M17 13v38M18 34l27-21M18 34l28 17' fill='none' stroke='%23a78bfa' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="preloader" id="preloader" role="status" aria-live="polite" aria-label="Loading portfolio">
+    <div class="preloader__orb" aria-hidden="true"></div>
+    <div class="preloader__terminal">
+      <div class="preloader__brand"><span class="brand-mark">K</span><span>KARAMI / SYSTEM</span></div>
+      <div class="preloader__log" id="preloader-log">
+        <p><span class="terminal-prompt">›</span> Initializing portfolio...</p>
+      </div>
+      <div class="preloader__track"><span id="preloader-bar"></span></div>
+      <div class="preloader__meta"><span>BOOT_SEQUENCE</span><span id="preloader-percent">0%</span></div>
+    </div>
+  </div>
+
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
+  <div class="cursor cursor--dot" aria-hidden="true"></div>
+  <div class="cursor cursor--ring" aria-hidden="true"><span></span></div>
+
+  <div class="atmosphere" aria-hidden="true">
+    <div class="aurora aurora--one"></div>
+    <div class="aurora aurora--two"></div>
+    <div class="grid-plane"></div>
+    <div class="noise"></div>
+    <div class="spotlight" id="spotlight"></div>
+    <div class="particles" id="global-particles"></div>
+    <span class="ambient-code ambient-code--one">λ</span>
+    <span class="ambient-code ambient-code--two">∫</span>
+    <span class="ambient-code ambient-code--three">{ }</span>
+    <span class="ambient-code ambient-code--four">⌘</span>
+  </div>
+
+  <header class="site-header" id="site-header">
+    <nav class="navbar shell" aria-label="Primary navigation">
+      <a class="logo magnetic" href="#home" aria-label="Karami — back to home" data-cursor="logo">
+        <span class="logo__sigil" aria-hidden="true">K</span>
+        <span class="logo__text">KARAMI</span>
+        <span class="logo__status" aria-label="Available for opportunities"></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-controls="nav-links" aria-expanded="false" aria-label="Open navigation">
+        <span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="#about" data-section="about"><span>01</span> About</a>
+        <a href="#skills" data-section="skills"><span>02</span> Expertise</a>
+        <a href="#projects" data-section="projects"><span>03</span> Work</a>
+        <a href="#experience" data-section="experience"><span>04</span> Journey</a>
+        <a href="#certificates" data-section="certificates"><span>05</span> Credentials</a>
+      </div>
+      <a class="nav-cta magnetic" href="mailto:aimankarami27@gmail.com"><span>Let's talk</span><i aria-hidden="true">↗</i></a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero section" id="home" aria-labelledby="hero-title">
+      <div class="hero__symbols" aria-hidden="true" id="hero-symbols"></div>
+      <div class="shell hero__layout">
+        <div class="hero__content">
+          <div class="eyebrow reveal" data-reveal="up">
+            <span class="eyebrow__pulse"></span>
+            <span>Available for meaningful work</span>
+            <span class="eyebrow__line"></span>
+            <span class="mono">MY · 2026</span>
+          </div>
+          <h1 class="hero__title reveal" id="hero-title" data-reveal="up" data-delay="100">
+            I engineer <span class="text-gradient">systems</span><br>
+            that endure.
+          </h1>
+          <div class="hero__role reveal" data-reveal="up" data-delay="180">
+            <span class="mono">//</span>
+            <span id="typing-text" aria-live="polite">Backend Systems Engineer</span><span class="typing-caret" aria-hidden="true"></span>
+          </div>
+          <p class="hero__intro reveal" data-reveal="up" data-delay="240">
+            I’m <strong>Muhamad Noraiman Karami</strong> — an Applied Mathematics (Hons) graduate and backend developer turning complex ideas into reliable, production-ready systems.
+          </p>
+          <div class="hero__actions reveal" data-reveal="up" data-delay="300">
+            <a class="button button--primary magnetic ripple-target" href="#projects">
+              <span>Explore selected work</span><svg aria-hidden="true"><use href="#icon-arrow"></use></svg>
+            </a>
+            <button class="button button--ghost magnetic ripple-target" type="button" data-resume-download>
+              <svg aria-hidden="true"><use href="#icon-download"></use></svg><span>Download résumé</span>
+            </button>
+          </div>
+          <div class="hero__socials reveal" data-reveal="up" data-delay="360" aria-label="Social links">
+            <a class="social-link magnetic" href="https://github.com/aimnkrmi" target="_blank" rel="noopener" aria-label="GitHub profile">
+              <svg aria-hidden="true"><use href="#icon-github"></use></svg><span>GitHub</span>
+            </a>
+            <a class="social-link magnetic" href="https://www.linkedin.com/in/aimankarami" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+              <svg aria-hidden="true"><use href="#icon-linkedin"></use></svg><span>LinkedIn</span>
+            </a>
+            <a class="social-link magnetic" href="mailto:aimankarami27@gmail.com" aria-label="Send an email">
+              <svg aria-hidden="true"><use href="#icon-mail"></use></svg><span>Email</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal" data-reveal="scale" data-delay="180" aria-label="Abstract developer portrait">
+          <div class="portrait-stage" data-parallax="0.08">
+            <div class="portrait-stage__orbit portrait-stage__orbit--outer"><span></span><span></span><span></span></div>
+            <div class="portrait-stage__orbit portrait-stage__orbit--inner"><span>∂</span><span>λ</span><span>∞</span></div>
+            <div class="portrait-stage__glow"></div>
+            <div class="portrait-card tilt-card" data-tilt-strength="5">
+              <div class="portrait-card__topbar">
+                <div class="window-dots"><i></i><i></i><i></i></div>
+                <span class="mono">identity.sys</span>
+                <span class="status-dot"></span>
+              </div>
+              <div class="portrait-card__art" aria-hidden="true">
+                <div class="portrait-halo"></div>
+                <div class="portrait-silhouette">
+                  <span class="portrait-head"></span>
+                  <span class="portrait-hair portrait-hair--left"></span>
+                  <span class="portrait-hair portrait-hair--right"></span>
+                  <span class="portrait-neck"></span>
+                  <span class="portrait-body"></span>
+                </div>
+                <div class="portrait-flower flower--one">✦</div>
+                <div class="portrait-flower flower--two">✧</div>
+                <div class="portrait-glyphs"><span>ARCHIVE_07</span><span>KNOWLEDGE</span><span>∫ f(x) dx</span></div>
+              </div>
+              <div class="portrait-card__footer">
+                <div><span class="mono text-muted">FOCUS</span><strong>Logic × Craft</strong></div>
+                <span class="portrait-card__index mono">K/01</span>
+              </div>
+              <div class="card-shine"></div>
+            </div>
+            <div class="floating-chip floating-chip--top glass-panel"><span class="chip-icon">⌘</span><span><small>STATUS</small>Building quietly</span></div>
+            <div class="floating-chip floating-chip--bottom glass-panel"><span class="chip-icon">λ</span><span><small>MODE</small>Deep work</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__bottom shell reveal" data-reveal="fade" data-delay="500">
+        <a class="scroll-cue" href="#about"><span class="scroll-cue__mouse"><i></i></span><span>Scroll to discover</span></a>
+        <div class="hero__metrics">
+          <div><strong data-counter="3">0</strong><span>Core disciplines</span></div>
+          <div><strong data-counter="100" data-suffix="%">0</strong><span>Built with intent</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section" id="about" aria-labelledby="about-title">
+      <div class="shell">
+        <header class="section-heading reveal" data-reveal="up">
+          <div class="section-kicker"><span>01</span><i></i><span>About the engineer</span></div>
+          <h2 id="about-title">Curiosity, shaped<br>into <em>craft.</em></h2>
+          <p>I approach software as an archive of decisions: each layer should be deliberate, legible, and built to last.</p>
+        </header>
+
+        <div class="about__grid">
+          <article class="about-story reveal" data-reveal="left">
+            <div class="quote-mark" aria-hidden="true">“</div>
+            <p class="about-story__lead">I find elegance where <span>mathematical reasoning</span> meets dependable engineering.</p>
+            <p>My work moves between numerical experimentation, application architecture, databases, and production infrastructure. I enjoy understanding the entire path—from an equation or user need to the system serving it reliably.</p>
+            <p>That breadth lets me make decisions with context: design schemas that support real workflows, deploy services that can be maintained, and translate difficult technical ideas into calm, usable experiences.</p>
+            <div class="about-signature"><span>Muhamad Noraiman Karami</span><small>Applied Mathematics · Backend · Research</small></div>
+          </article>
+
+          <div class="terminal-window reveal" data-reveal="right" aria-label="Interactive developer terminal">
+            <div class="terminal-window__bar">
+              <div class="window-dots"><i></i><i></i><i></i></div>
+              <span class="mono">karami@archive: ~/profile</span>
+              <button type="button" class="terminal-clear" aria-label="Clear terminal">clear</button>
+            </div>
+            <div class="terminal-window__body" id="terminal-output" aria-live="polite">
+              <p><span class="terminal-prompt">$</span> whoami</p>
+              <p class="terminal-response">applied_mathematician + backend_engineer</p>
+              <p><span class="terminal-prompt">$</span> cat values.json</p>
+              <div class="terminal-code"><span>{</span><br>
+                &nbsp;&nbsp;<b>"principles"</b>: [<em>"clarity"</em>, <em>"rigor"</em>, <em>"curiosity"</em>],<br>
+                &nbsp;&nbsp;<b>"currently"</b>: <em>"building systems that endure"</em>,<br>
+                &nbsp;&nbsp;<b>"coffee"</b>: <span class="code-number">true</span><br>
+              <span>}</span></div>
+              <p class="terminal-hint">Try: <button type="button" data-command="help">help</button>, <button type="button" data-command="projects">projects</button>, <button type="button" data-command="flower">flower</button></p>
+            </div>
+            <form class="terminal-input" id="terminal-form">
+              <label class="sr-only" for="terminal-command">Terminal command</label>
+              <span class="terminal-prompt">$</span>
+              <input id="terminal-command" name="command" type="text" autocomplete="off" spellcheck="false" placeholder="type a command...">
+            </form>
+          </div>
+        </div>
+
+        <div class="stat-grid">
+          <article class="stat-card reveal" data-reveal="up">
+            <span class="stat-card__icon">∑</span><strong data-counter="3">0</strong><p>Production-minded<br>case studies</p><small>SELECTED WORK</small>
+          </article>
+          <article class="stat-card reveal" data-reveal="up" data-delay="80">
+            <span class="stat-card__icon">⌁</span><strong data-counter="4">0</strong><p>Engineering<br>domains</p><small>FULL-STACK CONTEXT</small>
+          </article>
+          <article class="stat-card reveal" data-reveal="up" data-delay="160">
+            <span class="stat-card__icon">∞</span><strong data-counter="99" data-suffix="%">0</strong><p>Curiosity<br>uptime</p><small>ALWAYS LEARNING</small>
+          </article>
+          <article class="stat-card stat-card--quote reveal" data-reveal="up" data-delay="240"><p>“The flower of knowledge blooms in quiet places.”</p><span>ARCHIVE NOTE · 07</span></article>
+        </div>
+      </div>
+    </section>
+
+    <div class="equation-band" aria-hidden="true">
+      <div class="equation-track">
+        <span>e<sup>iπ</sup> + 1 = 0</span><span>∇·E = ρ/ε₀</span><span>∫₀<sup>∞</sup> e<sup>−x²</sup> dx = √π⁄2</span><span>φ = (1+√5)⁄2</span><span>F(n) = F(n−1) + F(n−2)</span><span>∂u/∂t = α∇²u</span><span>Σ 1/n² = π²⁄6</span><span>det(A − λI) = 0</span><span>P(A|B) = P(B|A)P(A)⁄P(B)</span><span>lim<sub>x→0</sub> (sin x)/x = 1</span>
+        <span>e<sup>iπ</sup> + 1 = 0</span><span>∇·E = ρ/ε₀</span><span>∫₀<sup>∞</sup> e<sup>−x²</sup> dx = √π⁄2</span><span>φ = (1+√5)⁄2</span><span>F(n) = F(n−1) + F(n−2)</span><span>∂u/∂t = α∇²u</span><span>Σ 1/n² = π²⁄6</span><span>det(A − λI) = 0</span><span>P(A|B) = P(B|A)P(A)⁄P(B)</span><span>lim<sub>x→0</sub> (sin x)/x = 1</span>
+      </div>
+    </div>
+
+    <section class="skills section" id="skills" aria-labelledby="skills-title">
+      <div class="shell">
+        <header class="section-heading section-heading--center reveal" data-reveal="up">
+          <div class="section-kicker"><span>02</span><i></i><span>Knowledge constellation</span></div>
+          <h2 id="skills-title">Systems of <em>expertise.</em></h2>
+          <p>Not a checklist—a connected set of tools, disciplines, and ways of thinking.</p>
+        </header>
+
+        <div class="constellation reveal" data-reveal="scale" id="constellation">
+          <svg class="constellation__lines" aria-hidden="true" viewBox="0 0 1000 620" preserveAspectRatio="none">
+            <defs><linearGradient id="line-gradient" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8B5CF6"/><stop offset="1" stop-color="#38BDF8"/></linearGradient></defs>
+            <path d="M500 310 L220 160 M500 310 L790 145 M500 310 L835 430 M500 310 L235 475 M500 310 L455 80 M500 310 L540 545 M220 160 L455 80 M790 145 L455 80 M835 430 L540 545 M235 475 L540 545"/>
+          </svg>
+          <button class="skill-node skill-node--core" style="--x:50%;--y:50%" type="button" data-skill="systems" aria-pressed="false"><span class="skill-node__ring"></span><strong>Systems</strong><small>Core</small></button>
+          <button class="skill-node" style="--x:22%;--y:26%" type="button" data-skill="backend" aria-pressed="false"><span class="skill-node__icon">{ }</span><strong>Backend</strong><small>Java · PHP</small></button>
+          <button class="skill-node" style="--x:79%;--y:23%" type="button" data-skill="infrastructure" aria-pressed="false"><span class="skill-node__icon">⌘</span><strong>Infrastructure</strong><small>Linux · Nginx</small></button>
+          <button class="skill-node" style="--x:83.5%;--y:69%" type="button" data-skill="mathematics" aria-pressed="false"><span class="skill-node__icon">∫</span><strong>Mathematics</strong><small>Numerical methods</small></button>
+          <button class="skill-node" style="--x:23.5%;--y:76%" type="button" data-skill="data" aria-pressed="false"><span class="skill-node__icon">▦</span><strong>Data</strong><small>MySQL · Design</small></button>
+          <button class="skill-node skill-node--small" style="--x:45.5%;--y:13%" type="button" data-skill="research" aria-pressed="false"><span class="skill-node__icon">λ</span><strong>Research</strong></button>
+          <button class="skill-node skill-node--small" style="--x:54%;--y:88%" type="button" data-skill="deployment" aria-pressed="false"><span class="skill-node__icon">↟</span><strong>Deployment</strong></button>
+          <div class="skill-detail glass-panel" id="skill-detail" aria-live="polite">
+            <span class="skill-detail__index mono">NODE / 00</span>
+            <h3>Systems thinking</h3>
+            <p>Connecting architecture, data, infrastructure, and user needs into one coherent whole.</p>
+            <div><span><small>EXPERIENCE</small><strong>Multi-domain</strong></span><span><small>PROJECTS</small><strong>03+</strong></span><span><small>CONFIDENCE</small><strong>High</strong></span></div>
+          </div>
+          <p class="constellation__hint mono">HOVER A NODE TO INSPECT</p>
+        </div>
+
+        <div class="capability-grid">
+          <article class="capability-card tilt-card reveal" data-reveal="up">
+            <div class="capability-card__number">01</div><div class="capability-card__icon">[server]</div>
+            <h3>Server Environment</h3><p>Ubuntu Linux, VPS deployment, SSH configuration, and pragmatic server management.</p>
+            <ul><li>Linux</li><li>Docker</li><li>SSH</li></ul><div class="card-shine"></div>
+          </article>
+          <article class="capability-card tilt-card reveal" data-reveal="up" data-delay="100">
+            <div class="capability-card__number">02</div><div class="capability-card__icon">[proxy]</div>
+            <h3>Web Infrastructure</h3><p>Nginx reverse proxy, SSL configuration, domain routing, and production deployment.</p>
+            <ul><li>Nginx</li><li>SSL</li><li>VPS</li></ul><div class="card-shine"></div>
+          </article>
+          <article class="capability-card tilt-card reveal" data-reveal="up" data-delay="200">
+            <div class="capability-card__number">03</div><div class="capability-card__icon">[backend]</div>
+            <h3>Backend Systems</h3><p>Laravel, Java EE, relational data, authentication, and maintainable application architecture.</p>
+            <ul><li>Java EE</li><li>Laravel</li><li>MySQL</li></ul><div class="card-shine"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects section" id="projects" aria-labelledby="projects-title">
+      <div class="shell">
+        <header class="section-heading reveal" data-reveal="up">
+          <div class="section-kicker"><span>03</span><i></i><span>Selected work</span></div>
+          <h2 id="projects-title">Built with reason.<br><em>Delivered with care.</em></h2>
+          <p>A focused collection of systems spanning production infrastructure, workflow design, and numerical research.</p>
+        </header>
+
+        <div class="project-toolbar reveal" data-reveal="up">
+          <div class="project-filters" role="group" aria-label="Filter projects">
+            <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All <span>03</span></button>
+            <button class="filter-button" type="button" data-filter="backend" aria-pressed="false">Backend</button>
+            <button class="filter-button" type="button" data-filter="research" aria-pressed="false">Research</button>
+            <button class="filter-button" type="button" data-filter="infrastructure" aria-pressed="false">Infrastructure</button>
+          </div>
+          <label class="project-search">
+            <svg aria-hidden="true"><use href="#icon-search"></use></svg><span class="sr-only">Search projects</span>
+            <input type="search" id="project-search" placeholder="Search the archive..." autocomplete="off">
+            <kbd>/</kbd>
+          </label>
+        </div>
+
+        <div class="project-grid" id="project-grid">
+          <article class="project-card project-card--featured tilt-card reveal" data-category="backend infrastructure" data-title="Veloura Cinema Java Tomcat MySQL Docker Nginx" data-reveal="up">
+            <div class="project-card__visual project-visual--cinema">
+              <div class="project-visual__chrome"><span></span><span></span><span></span><small>veloura.app</small></div>
+              <div class="cinema-ui" aria-hidden="true"><div class="cinema-ui__hero"><span>NOW SHOWING</span><strong>VELOURA</strong><i></i></div><div class="cinema-ui__row"><i></i><i></i><i></i><i></i></div></div>
+              <div class="project-card__label"><i></i> Featured project</div><div class="card-shine"></div>
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__meta"><span class="mono">01 / PRODUCTION SYSTEM</span><span>2025</span></div>
+              <h3>Veloura Cinema</h3><p>Java-based movie booking platform deployed on production Linux infrastructure.</p>
+              <ul class="tech-list"><li>Java EE</li><li>Tomcat</li><li>MySQL</li><li>Docker</li><li>Nginx</li></ul>
+              <div class="project-card__actions">
+                <button class="text-link" type="button" data-project-open="veloura">View case study <svg aria-hidden="true"><use href="#icon-arrow"></use></svg></button>
+                <button class="icon-link" type="button" data-local-link="Veloura source repository" aria-label="View Veloura source code"><svg aria-hidden="true"><use href="#icon-github"></use></svg></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card tilt-card reveal" data-category="backend" data-title="eKursus Laravel PHP MySQL workflow" data-reveal="up" data-delay="100">
+            <div class="project-card__visual project-visual--course">
+              <div class="dashboard-mock" aria-hidden="true"><aside><b>eK</b><i></i><i></i><i></i><i></i></aside><main><span></span><div class="dash-cards"><i></i><i></i><i></i></div><div class="dash-chart"><i></i></div></main></div><div class="card-shine"></div>
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__meta"><span class="mono">02 / WORKFLOW SYSTEM</span><span>2024</span></div>
+              <h3>eKursus System</h3><p>A centralized platform replacing manual course workflows and fragmented data collection.</p>
+              <ul class="tech-list"><li>Laravel</li><li>PHP</li><li>MySQL</li></ul>
+              <div class="project-card__actions"><button class="text-link" type="button" data-project-open="ekursus">Explore project <svg aria-hidden="true"><use href="#icon-arrow"></use></svg></button><button class="icon-link" type="button" data-local-link="eKursus source repository" aria-label="View eKursus source code"><svg aria-hidden="true"><use href="#icon-github"></use></svg></button></div>
+            </div>
+          </article>
+
+          <article class="project-card tilt-card reveal" data-category="research" data-title="rcPINN Python TensorFlow Keras numerical methods research" data-reveal="up" data-delay="180">
+            <div class="project-card__visual project-visual--research">
+              <div class="research-mock" aria-hidden="true"><span class="research-formula">∂u/∂t + 𝒩[u] = 0</span><svg viewBox="0 0 400 180"><path d="M0 140 C45 139 52 80 90 85 S135 165 180 115 S230 22 275 52 S320 148 400 24"/><path class="research-line--ghost" d="M0 125 C45 120 60 104 90 105 S140 135 180 100 S230 58 275 65 S330 108 400 42"/></svg><div><i></i><i></i><i></i><i></i><i></i></div></div><div class="card-shine"></div>
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__meta"><span class="mono">03 / NUMERICAL RESEARCH</span><span>2025</span></div>
+              <h3>rcPINN</h3><p>Restarting–Chunking PINN training framework for difficult long-time horizon problems.</p>
+              <ul class="tech-list"><li>Python</li><li>TensorFlow</li><li>Numerical Methods</li></ul>
+              <div class="project-card__actions"><button class="text-link" type="button" data-project-open="rcpinn">Read the research <svg aria-hidden="true"><use href="#icon-arrow"></use></svg></button><button class="icon-link" type="button" data-local-link="rcPINN source repository" aria-label="View rcPINN source code"><svg aria-hidden="true"><use href="#icon-github"></use></svg></button></div>
+            </div>
+          </article>
+        </div>
+        <p class="no-results" id="no-results" hidden>No records found in this archive. Try another query.</p>
+      </div>
+    </section>
+
+    <section class="experience section" id="experience" aria-labelledby="experience-title">
+      <div class="shell experience__layout">
+        <header class="section-heading experience__heading reveal" data-reveal="left">
+          <div class="section-kicker"><span>04</span><i></i><span>The journey</span></div>
+          <h2 id="experience-title">A timeline of<br><em>continuous study.</em></h2>
+          <p>A path shaped by applied mathematics, research internships, and hands-on software work — from secondary school in Kelantan to research in Japan.</p>
+          <div class="experience__note glass-panel"><span class="status-dot"></span><p><strong>Current chapter</strong><br>Applied Mathematics (Hons) graduand, UMT — open to engineering and research roles.</p></div>
+        </header>
+
+        <div class="timeline" id="timeline">
+          <div class="timeline__line"><span id="timeline-progress"></span></div>
+          <article class="timeline-entry is-open reveal" data-reveal="right">
+            <button class="timeline-entry__header" type="button" aria-expanded="true">
+              <span class="timeline-entry__marker"><i></i></span><span class="timeline-entry__date mono">OCT 2025 — JAN 2026</span>
+              <span class="timeline-entry__title"><strong>IT Intern — Department of Veterinary Services (DVS)</strong><small>Kelantan State · Laravel · Support</small></span><span class="timeline-entry__toggle">+</span>
+            </button>
+            <div class="timeline-entry__body"><div><p>Built a web-based internal application with Laravel, unifying three separate modules into a single system, while keeping day-to-day operations running smoothly.</p><ul><li>Laravel application (3 modules unified)</li><li>Network, PC & printer support</li><li>Event multimedia operations</li></ul></div></div>
+          </article>
+          <article class="timeline-entry reveal" data-reveal="right" data-delay="100">
+            <button class="timeline-entry__header" type="button" aria-expanded="false">
+              <span class="timeline-entry__marker"><i></i></span><span class="timeline-entry__date mono">AUG 2025 — SEP 2025</span>
+              <span class="timeline-entry__title"><strong>Research Intern — JAIST, Japan</strong><small>PINNs · Machine Learning · HPC</small></span><span class="timeline-entry__toggle">+</span>
+            </button>
+            <div class="timeline-entry__body"><div><p>Researched machine learning and computational mathematics at the Japan Advanced Institute of Science and Technology, focusing on Physics-Informed Neural Networks (PINNs).</p><ul><li>Physics-Informed Neural Networks</li><li>HPC training on NVIDIA A100 80GB PCIe</li><li>Cut computation time by 59%</li></ul></div></div>
+          </article>
+          <article class="timeline-entry reveal" data-reveal="right" data-delay="180">
+            <button class="timeline-entry__header" type="button" aria-expanded="false">
+              <span class="timeline-entry__marker"><i></i></span><span class="timeline-entry__date mono">2022 — 2026</span>
+              <span class="timeline-entry__title"><strong>BSc Applied Mathematics (Hons) — UMT</strong><small>Universiti Malaysia Terengganu · CGPA 3.97</small></span><span class="timeline-entry__toggle">+</span>
+            </button>
+            <div class="timeline-entry__body"><div><p>Studying applied mathematics with a strong computing thread, graduating March 2026 with a 3.97 CGPA and a place on the Dean's List.</p><ul><li>Dean's List · CGPA 3.97</li><li>Programming · OOP · Web Development</li><li>Scientific Computing</li></ul></div></div>
+          </article>
+          <article class="timeline-entry reveal" data-reveal="right" data-delay="240">
+            <button class="timeline-entry__header" type="button" aria-expanded="false">
+              <span class="timeline-entry__marker"><i></i></span><span class="timeline-entry__date mono">2021 — 2022</span>
+              <span class="timeline-entry__title"><strong>Foundation in Engineering — UiTM</strong><small>UiTM Dengkil, Selangor · CGPA 3.96</small></span><span class="timeline-entry__toggle">+</span>
+            </button>
+            <div class="timeline-entry__body"><div><p>Completed the engineering foundation programme with a 3.96 CGPA, building the mathematical and analytical base for the degree that followed.</p><ul><li>CGPA 3.96</li><li>Mathematics & physical sciences</li><li>Analytical foundations</li></ul></div></div>
+          </article>
+          <article class="timeline-entry reveal" data-reveal="right" data-delay="300">
+            <button class="timeline-entry__header" type="button" aria-expanded="false">
+              <span class="timeline-entry__marker"><i></i></span><span class="timeline-entry__date mono">2021</span>
+              <span class="timeline-entry__title"><strong>Sijil Pelajaran Malaysia (SPM)</strong><small>SMK Tanjong Mas · 2A+ 4A 3A-</small></span><span class="timeline-entry__toggle">+</span>
+            </button>
+            <div class="timeline-entry__body"><div><p>Finished secondary school at SMK Tanjong Mas with strong results (2A+ 4A 3A-), the starting point of a continuous study path.</p><ul><li>2A+ · 4A · 3A-</li><li>Science stream</li></ul></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="certificates section" id="certificates" aria-labelledby="certificates-title">
+      <div class="shell">
+        <header class="section-heading section-heading--row reveal" data-reveal="up">
+          <div><div class="section-kicker"><span>05</span><i></i><span>Credentials</span></div><h2 id="certificates-title">Verified <em>knowledge.</em></h2></div>
+          <p>Qualifications and credentials from an ongoing practice of focused study.</p>
+        </header>
+        <div class="certificate-grid">
+          <article class="certificate-card tilt-card reveal" data-reveal="up"><div class="certificate-card__seal">IT<i></i></div><span class="mono">CERTIFICATION · 2026</span><h3>IT Fundamentals</h3><p>Core information technology principles and practice — The Oxbridge Institute of Professional Development, United Kingdom.</p><footer><span>Oxbridge Institute, UK</span><a href="assets/docs/certifications.pdf" target="_blank" rel="noopener">View ↗</a></footer><div class="card-shine"></div></article>
+          <article class="certificate-card tilt-card reveal" data-reveal="up" data-delay="100"><div class="certificate-card__seal">∑<i></i></div><span class="mono">DEGREE · 2022–2026</span><h3>BSc Applied Mathematics (Hons)</h3><p>Universiti Malaysia Terengganu — CGPA 3.97, Dean's List, with coursework across computing and scientific computing.</p><footer><span>UMT · Dean's List</span><a href="assets/docs/academic_qualifications.pdf" target="_blank" rel="noopener">View ↗</a></footer><div class="card-shine"></div></article>
+          <article class="certificate-card tilt-card reveal" data-reveal="up" data-delay="200"><div class="certificate-card__seal">∫<i></i></div><span class="mono">FOUNDATION · 2021–2022</span><h3>Foundation in Engineering</h3><p>UiTM Dengkil, Selangor — CGPA 3.96, establishing the mathematical and analytical base for the degree.</p><footer><span>UiTM Dengkil</span><a href="assets/docs/academic_qualifications.pdf" target="_blank" rel="noopener">View ↗</a></footer><div class="card-shine"></div></article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-stars" id="footer-stars" aria-hidden="true"></div>
+    <button class="hidden-flower" id="hidden-flower" type="button" aria-label="A hidden flower">✦</button>
+    <div class="shell">
+      <div class="footer__top">
+        <a class="logo logo--footer magnetic" href="#home"><span class="logo__sigil">K</span><span class="logo__text">KARAMI</span></a>
+        <blockquote>“True knowledge is quiet.<br>Its work speaks for it.”</blockquote>
+        <a class="back-to-top magnetic" href="#home"><span>Back to top</span><i>↑</i></a>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span id="current-year">2026</span> Muhamad Noraiman Karami. Designed & engineered from first principles.</p>
+        <div><a href="https://github.com/aimnkrmi" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/aimankarami" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:aimankarami27@gmail.com">Email</a></div>
+        <p class="mono">SYSTEM.STATUS <span>●</span> OPERATIONAL</p>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-glow"></div>
+    <button class="dialog-close magnetic" type="button" aria-label="Close case study">×</button>
+    <div class="project-dialog__content">
+      <span class="section-kicker"><span id="dialog-index">01</span><i></i><span>Case study</span></span>
+      <h2 id="dialog-title">Project title</h2>
+      <p class="project-dialog__lead" id="dialog-lead"></p>
+      <div class="project-dialog__stats" id="dialog-stats"></div>
+      <div class="project-dialog__body"><div><h3>The challenge</h3><p id="dialog-challenge"></p></div><div><h3>The response</h3><p id="dialog-response"></p></div></div>
+      <ul class="project-dialog__bullets" id="dialog-bullets"></ul>
+      <button class="button button--ghost" type="button" data-dialog-close>Return to archive</button>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"><span class="toast__icon">i</span><p><strong>Local demo</strong><small>Link placeholder ready for your real URL.</small></p></div>
+  <div class="easter-overlay" id="easter-overlay" aria-hidden="true"><div class="easter-flower">✦</div><p class="mono">ARCHIVE UNLOCKED</p><span>Knowledge blooms in every direction.</span></div>
+  <div class="sr-only" id="announcer" aria-live="polite"></div>
+
+  <svg class="svg-sprite" aria-hidden="true">
+    <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14"/></symbol>
+    <symbol id="icon-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6ZM2 9h4v12H2z"/><path d="M4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24"><path d="M3 5h18v14H3zM3 6l9 7 9-7"/></symbol>
+    <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+    <symbol id="icon-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4 20-7Z"/><path d="M22 2 11 13"/></symbol>
+    <symbol id="icon-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+  </svg>
+</body>
+</html>
